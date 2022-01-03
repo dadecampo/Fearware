@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fearware", "Fearware.csproj", "{DA37D634-881E-4984-8328-1F9EE2708470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIC-TAC-TOE", "..\TIC TAC TOE\TIC-TAC-TOE.csproj", "{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupFearware", "..\SetupFearware\SetupFearware.vdproj", "{69E34984-2515-4DB6-86D4-414B0143A0CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA37D634-881E-4984-8328-1F9EE2708470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA37D634-881E-4984-8328-1F9EE2708470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA37D634-881E-4984-8328-1F9EE2708470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA37D634-881E-4984-8328-1F9EE2708470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E34984-2515-4DB6-86D4-414B0143A0CE}.Debug|Any CPU.ActiveCfg = Debug
+		{69E34984-2515-4DB6-86D4-414B0143A0CE}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9DD06A2-E1A0-4795-8AE9-69561819D781}
+	EndGlobalSection
+EndGlobal
