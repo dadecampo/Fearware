@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fearware", "Fearware.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIC-TAC-TOE", "..\TIC TAC TOE\TIC-TAC-TOE.csproj", "{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupFearware", "..\SetupFearware\SetupFearware.vdproj", "{69E34984-2515-4DB6-86D4-414B0143A0CE}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TicTacToeInstaller", "..\TicTacToeInstaller\TicTacToeInstaller.vdproj", "{41622BDE-6A65-44F9-AEA7-DC8D46849487}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,8 +23,8 @@ Global
 		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69E34984-2515-4DB6-86D4-414B0143A0CE}.Debug|Any CPU.ActiveCfg = Debug
-		{69E34984-2515-4DB6-86D4-414B0143A0CE}.Release|Any CPU.ActiveCfg = Release
+		{41622BDE-6A65-44F9-AEA7-DC8D46849487}.Debug|Any CPU.ActiveCfg = Debug
+		{41622BDE-6A65-44F9-AEA7-DC8D46849487}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

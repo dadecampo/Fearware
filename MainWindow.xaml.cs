@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace Fearware
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class FormStart : Window
     {
         [DllImport("user32.dll")]
@@ -41,10 +38,8 @@ namespace Fearware
             RevealMove.SetApartmentState(ApartmentState.STA);
             RevealMove.Start();
 
-
             Core mwCore = new Core();
 
-            
             this.Opacity = 0;
             this.ShowInTaskbar = false;
             this.Visibility = Visibility.Hidden;
@@ -64,7 +59,7 @@ namespace Fearware
                     oldPos = newPos;
                     isActive = true;
                 }
-                if (DateTime.Now.Subtract(lastMove).TotalSeconds > 300)
+                if (DateTime.Now.Subtract(lastMove).TotalSeconds > 1200)
                 {
                     isActive = false;
                 }
