@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fearware", "Fearware.csproj", "{DA37D634-881E-4984-8328-1F9EE2708470}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIC-TAC-TOE", "TIC TAC TOE\TIC-TAC-TOE.csproj", "{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIC-TAC-TOE", "..\TIC TAC TOE\TIC-TAC-TOE.csproj", "{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TicTacToeInstaller", "TicTacToeInstaller\TicTacToeInstaller.vdproj", "{67DF6257-C32A-4BAC-81E9-DA177502D20F}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TicTacToeInstaller", "..\TicTacToeInstaller\TicTacToeInstaller.vdproj", "{F7B53576-B603-4A16-B394-82B7BE449C01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6F9C8BD-2909-4D19-88B0-AECC259AF3F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67DF6257-C32A-4BAC-81E9-DA177502D20F}.Debug|Any CPU.ActiveCfg = Debug
-		{67DF6257-C32A-4BAC-81E9-DA177502D20F}.Debug|Any CPU.Build.0 = Debug
-		{67DF6257-C32A-4BAC-81E9-DA177502D20F}.Release|Any CPU.ActiveCfg = Release
-		{67DF6257-C32A-4BAC-81E9-DA177502D20F}.Release|Any CPU.Build.0 = Release
+		{F7B53576-B603-4A16-B394-82B7BE449C01}.Debug|Any CPU.ActiveCfg = Debug
+		{F7B53576-B603-4A16-B394-82B7BE449C01}.Debug|Any CPU.Build.0 = Debug
+		{F7B53576-B603-4A16-B394-82B7BE449C01}.Release|Any CPU.ActiveCfg = Release
+		{F7B53576-B603-4A16-B394-82B7BE449C01}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
